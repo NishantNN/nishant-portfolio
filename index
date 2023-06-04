@@ -48,7 +48,7 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Nishanta Poudel</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="news.html">News</a>
+                <a href="news">News</a>
             </div>
         </div>
     </section>
@@ -259,7 +259,7 @@
     <footer>
         <span>Nishanta Poudel | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
         <br>
-        <a href="privacy policy.html">Privacy Policy</a> &nbsp;&nbsp;||&nbsp;&nbsp;<a href="#">Terms & Conditions</a> 
+        <a href="privacy policy">Privacy Policy</a> &nbsp;&nbsp;||&nbsp;&nbsp;<a href="Privacy Policy">Terms & Conditions</a> 
     </footer>
 </body>
 </html>
