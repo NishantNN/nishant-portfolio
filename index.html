@@ -232,20 +232,21 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <!-- form start-->
+                    <form method="post">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" name="Name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="Email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="Subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea name="Message" cols="30" rows="10" placeholder="Message.." required></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit">Send message</button>
@@ -261,5 +262,16 @@
         <br>
         <a href="privacy policy">Privacy Policy</a> &nbsp;&nbsp;||&nbsp;&nbsp;<a href="privacy policy">Terms & Conditions</a> 
     </footer>
+       <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwElhH76B5Dvbcj9GK2klkok-OWK1KDNpK_h0WkHAaY_FS-BkPr33hxdSorHYH1neSN/exec>'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
